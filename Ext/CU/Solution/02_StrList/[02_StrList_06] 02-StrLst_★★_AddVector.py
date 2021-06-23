@@ -1,0 +1,12 @@
+u = input()
+v = input()
+u = u[1:-1].split(",")
+v = v[1:-1].split(",")
+u[0] = float(u[0])
+u[1] = float(u[1])
+u[2] = float(u[2])
+v[0] = float(v[0])
+v[1] = float(v[1])
+v[2] = float(v[2])
+a = [u[0]+v[0], u[1]+v[1], u[2]+v[2]]
+print(u, "+", v, "=", a)
