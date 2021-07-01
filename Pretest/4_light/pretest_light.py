@@ -1,5 +1,5 @@
-height = float(input())
-price = int(input())
+height = float(input('Hight : '))
+price = float(input('Cost : '))
 
 def is_corruption(h, p):
     if (h < 1) & (p < 1000): 
