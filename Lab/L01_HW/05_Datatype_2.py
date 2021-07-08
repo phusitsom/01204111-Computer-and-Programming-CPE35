@@ -1,2 +1,2 @@
-num = input('Input decimal: ')
-print((str(int(float(num)))+' ') * int(float(num)))
+num = int(float(input('Input decimal: '))) 
+print((str(num)+' ') * num)
