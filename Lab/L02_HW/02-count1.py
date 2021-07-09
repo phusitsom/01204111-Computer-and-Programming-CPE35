@@ -1,19 +1,11 @@
-x, y, p, numList = int(input()), int(input()), int(input()), []
-if x <= y:
-    while x <= y:
-        if x % p == 0 : x+=11
-        if x >= y: break
-        numList.append(str(x))
-        x+=1
-    newnumList = []
-    for i in range(len(numList)):
-        if i % 10 == 0: newnumList.append('\n')
-        newnumList.append(numList[i])
-    output = ''
-    for x in newnumList[1:]:
-        if x == '\n': output += x
-        else : output += (x + ' ')
-    print(output)
-
-
-
+x, y, p = list(int(input()) for i in range(3))
+i = 1
+while x <= y:
+  if x % p == 0: x += 11
+  else:
+    if i == 10:
+      print(f' {x}', end='\n')
+      i = 0
+    elif i == 1:print(f'{x}', end = '')
+    else:print(f' {x}', end = '')
+    i, x = i+1, x+1
