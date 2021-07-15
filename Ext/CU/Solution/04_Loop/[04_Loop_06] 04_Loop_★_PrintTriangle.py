@@ -6,4 +6,4 @@ for i in range(n):
         print('*' * (2 * n - 1))
     else:
         print(str(' ' * (n - 1 - i)) + '*', end='')
-        print(str(' ' * (2 * i - 1)) + '*' )
+        print(str(' ' * (2 * i - 1)) + '*')

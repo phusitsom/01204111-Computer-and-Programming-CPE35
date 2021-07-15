@@ -9,6 +9,7 @@ def pattern1(nrows, ncols):
         x.append(y)
     return x
 
+
 def pattern2(nrows, ncols):
     x = []
     for i in range(1, nrows+1):
@@ -18,7 +19,8 @@ def pattern2(nrows, ncols):
         x.append(y)
     return x
 
-def pattern3( N ):
+
+def pattern3(N):
     c = 1
     x = []
     for i in range(N):
@@ -29,19 +31,21 @@ def pattern3( N ):
         x.append(y)
     return x
 
-def pattern4( N ):
+
+def pattern4(N):
     c = 1
     x = []
     for i in range(N):
         y = [0 for i in range(i)]
         x.append(y)
     for i in range(N):
-        for j in range(i,-1,-1):
+        for j in range(i, -1, -1):
             x[j].append(c)
             c += 1
     return x
 
-def pattern5( N ):
+
+def pattern5(N):
     c = 1
     x = []
     for i in range(N):
@@ -53,7 +57,8 @@ def pattern5( N ):
             c += 1
     return x
 
-def pattern6( N ):
+
+def pattern6(N):
     c = 1
     x = []
     for i in range(N):
@@ -69,5 +74,6 @@ def pattern6( N ):
                 x[j].append(c)
                 c += 1
     return x
+
 
 exec(input().strip())

@@ -7,7 +7,7 @@ for i in range(n):
         ans.append(x)
         c += 1
     else:
-        ans.insert(0,x)
+        ans.insert(0, x)
         c += 1
 x = input().strip().split()
 for i in range(len(x)):
@@ -15,7 +15,7 @@ for i in range(len(x)):
         ans.append(int(x[i]))
         c += 1
     else:
-        ans.insert(0,int(x[i]))
+        ans.insert(0, int(x[i]))
         c += 1
 x = int(input())
 while(x != -1):

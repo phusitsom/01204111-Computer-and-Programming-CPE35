@@ -8,4 +8,4 @@ else:
         Sum = Sum + float(n)
         n = input()
         c += 1
-    print(round(Sum/c,2))
+    print(round(Sum/c, 2))

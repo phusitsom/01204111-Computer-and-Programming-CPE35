@@ -1,5 +1,5 @@
 name = input().strip()
-fn = open(name,'r')
+fn = open(name, 'r')
 comm = fn.readline().strip()
 pattern = fn.readline().strip()
 if comm == 'T2M':

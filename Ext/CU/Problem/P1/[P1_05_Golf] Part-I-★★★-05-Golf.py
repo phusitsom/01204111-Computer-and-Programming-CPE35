@@ -1,6 +1,6 @@
 import math
-par = [0,0,0,0,0,0,0,0,0]
-stroke = [0,0,0,0,0,0,0,0,0]
+par = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+stroke = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 new_stroke = 0
 for i in range(9):
     par[i], stroke[i], c = [int(e) for e in input().strip().split()]

@@ -1,6 +1,6 @@
 c = input()
 if c == 'str2RLE':
-    #stringเป็นRLE
+    # stringเป็นRLE
     st = input()
     p = ''
     n = st[0]
@@ -15,7 +15,7 @@ if c == 'str2RLE':
     p = p[0:] + n + ' ' + str(count) + ' '
     print(p)
 elif c == 'RLE2str':
-    #RLEเป็นstring
+    # RLEเป็นstring
     st = input()
     st = st.split()
     for i in range(len(st)//2):

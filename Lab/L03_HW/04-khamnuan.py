@@ -4,7 +4,7 @@ def even_check(num):
     else: print('The number is odd')
     
 def prime_check(num):
-    isprime = None
+    isnotprime = None
     if num > 1:
         for i in range(2, num):
             if (num % i) == 0:

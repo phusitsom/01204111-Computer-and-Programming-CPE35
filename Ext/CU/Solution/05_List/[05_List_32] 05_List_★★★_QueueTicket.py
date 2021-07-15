@@ -15,13 +15,13 @@ for i in range(n):
         time_t.append(int(c[1]))
         r += 1
     if c[0] == 'next':
-        x +=1
+        x += 1
         ans.append('call ' + str(tic[x]))
     if c[0] == 'order':
-        ans.append('qtime ' + str(tic[x]) +' '+ str(int(c[1])-time_t[x]))
+        ans.append('qtime ' + str(tic[x]) + ' ' + str(int(c[1])-time_t[x]))
         avg += int(c[1])-time_t[x]
         m += 1
     if c[0] == 'avg_qtime':
-        ans.append('avg_qtime '+ str(round(avg/m,4)))
+        ans.append('avg_qtime ' + str(round(avg/m, 4)))
 for i in range(len(ans)):
     print(ans[i])

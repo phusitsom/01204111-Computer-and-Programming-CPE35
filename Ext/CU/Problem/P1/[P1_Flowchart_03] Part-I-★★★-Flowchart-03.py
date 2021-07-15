@@ -22,10 +22,10 @@ else:
         else:
             a = math.log10(c)
     else:
-        while a>d:
+        while a > d:
             a = a-2
-            if a<b:
-                break;
+            if a < b:
+                break
             else:
                 c = c+a
 print(a, b, c, d)

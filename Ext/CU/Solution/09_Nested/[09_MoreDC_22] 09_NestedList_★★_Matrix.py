@@ -5,15 +5,17 @@ def read_matrix():
         x = input().split()
         r = []
         for e in x:
-            r.append( float(e) )
+            r.append(float(e))
         m.append(r)
     return m
+
 
 def mult_c(c, A):
     for i in range(len(A)):
         for j in range(len(A[i])):
             A[i][j] *= c
     return A
+
 
 def mult(A, B):
     X = []
@@ -27,4 +29,5 @@ def mult(A, B):
         X.append(C)
     return X
 
-exec(input().strip()) # ตอ้ งมคี ำสั่งนี้ ตรงนี้ตอนสง่ ให้Grader ตรวจ
+
+exec(input().strip())  # ตอ้ งมคี ำสั่งนี้ ตรงนี้ตอนสง่ ให้Grader ตรวจ

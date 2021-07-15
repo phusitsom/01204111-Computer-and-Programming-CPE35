@@ -6,11 +6,14 @@ def make_int_list(x):
         x[i] = int(x[i])
     return x
 
+
 def is_odd(e):
     # คืนค่ำจริงเมื่อ e เป็นจ ำนวนคี่ ถ้ำไม่ใช่ คืนค่ำเท็จ
     if e % 2 == 0:
         return False
-    else: return True
+    else:
+        return True
+
 
 def odd_list(alist):
     # คืน list ที่มีค่ำเหมือน alist แต่มีเฉพำะตัวที่เป็นจ ำนวนคี่
@@ -21,6 +24,7 @@ def odd_list(alist):
             s.append(alist[i])
     return s
 
+
 def sum_square(alist):
     # คืนผลรวมของก ำลังสองของแต่ละค่ำใน alist
     # เช่น alist = [1,3,4] ได้ผลเป็น (1*1 + 3*3 + 4*4) = 26
@@ -29,4 +33,5 @@ def sum_square(alist):
         s += alist[i] ** 2
     return s
 
-exec(input().strip()) # ต้องมีบรรทัดนี้เมื่อส่งไป grader
+
+exec(input().strip())  # ต้องมีบรรทัดนี้เมื่อส่งไป grader

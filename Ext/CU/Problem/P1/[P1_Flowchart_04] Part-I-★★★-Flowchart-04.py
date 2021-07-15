@@ -8,11 +8,11 @@ if len(x) == 9:
     while i < 3:
         if x[3*i] == x[3*i+1] == x[3*i+2]:
             win = x[3*i]
-            break;
+            break
         else:
             if x[i] == x[i+3] == x[i+6]:
                 win = x[i]
-                break;
+                break
             else:
                 i += 1
     if win == '-':

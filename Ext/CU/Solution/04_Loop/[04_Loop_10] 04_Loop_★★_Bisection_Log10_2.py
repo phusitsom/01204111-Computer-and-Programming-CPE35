@@ -13,4 +13,4 @@ while abs(a - 10 ** x) > 10 ** (-10) * max(a, 10 ** x):
     elif 10 ** x < a:
         L = x
     x = (L + U) / 2
-print(round(x,6))
+print(round(x, 6))

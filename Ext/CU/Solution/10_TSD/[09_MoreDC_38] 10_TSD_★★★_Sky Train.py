@@ -14,7 +14,8 @@ while len(s) == 2:
     s = input().strip().split()
 ans = []
 if s[0] in station:
-    ans = [i for i in station[s[0]]] # ans = station[s[0]] ans connect to station[s[0]]
+    # ans = station[s[0]] ans connect to station[s[0]]
+    ans = [i for i in station[s[0]]]
     for i in station[s[0]]:
         for j in station[i]:
             if j not in ans and j != s[0]:

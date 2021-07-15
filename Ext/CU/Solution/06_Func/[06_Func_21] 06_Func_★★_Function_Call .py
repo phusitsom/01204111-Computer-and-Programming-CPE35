@@ -6,6 +6,7 @@ def read_answers():
         answers.append([sid, ans])
     return answers
 
+
 def marking(answer, solution):
     score = 0
     for i in range(len(answer)):
@@ -13,12 +14,14 @@ def marking(answer, solution):
             score += 1
     return score
 
+
 def grading(score):
-    g = [[80,"A"], [70,"B"], [60,"C"], [50,"D"]]
-    for a,b in g:
+    g = [[80, "A"], [70, "B"], [60, "C"], [50, "D"]]
+    for a, b in g:
         if score >= a:
             return b
     return "F"
+
 
 def scoring(answers, solution):
     scores = []
@@ -28,20 +31,23 @@ def scoring(answers, solution):
         scores.append([sid, score, grade])
     return scores
 
+
 def report(scores):
-    for sid,sc,grade in scores:
+    for sid, sc, grade in scores:
         print(sid, sc, grade)
+
 
 def sort(scores):
     x = []
-    for sid,score,grade in scores:
+    for sid, score, grade in scores:
         x.append([score, sid, grade])
     x.sort(reverse=True)
     for i in range(len(x)):
         scores[i] = [x[i][1], x[i][0], x[i][2]]
 
+
 sol = input()
 ans = read_answers()
-s1 = scoring(ans,sol)
+s1 = scoring(ans, sol)
 sort(s1)
 report(s1)

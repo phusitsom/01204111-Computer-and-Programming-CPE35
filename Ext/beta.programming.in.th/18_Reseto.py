@@ -1,4 +1,4 @@
-N, K = map(int,input().split())
+N, K = map(int, input().split())
 number = []
 cut = []
 for i in range(2, N+1, 1):

@@ -11,8 +11,8 @@ if x1 - x5 > x2:
             print('C8')
 else:
     if x2 - x1 <= x3:
-        if x4<x5+x1:
-            if x3+x2>x5:
+        if x4 < x5+x1:
+            if x3+x2 > x5:
                 print('C3')
             else:
                 print('C2')

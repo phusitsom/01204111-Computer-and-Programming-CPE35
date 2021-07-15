@@ -8,7 +8,7 @@ while n != 1:
     else:
         n = 3*n + 1
         L.append(n)
-if len(L)<=15:
+if len(L) <= 15:
     for i in range(len(L)-1):
         s = s[0:] + str(L[i]) + '->'
     s = s[0:] + str(L[-1])

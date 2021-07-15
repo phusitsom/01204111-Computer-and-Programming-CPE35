@@ -1,6 +1,8 @@
 n = int(input())
-first_name = ["Robert", "William", "James", "John", "Margaret", "Edward", "Sarah", "Andrew", "Anthony", "Deborah"]
-nick_name = ["Dick", "Bill", "Jim", "Jack", "Peggy", "Ed", "Sally", "Andy", "Tony", "Debbie"]
+first_name = ["Robert", "William", "James", "John", "Margaret",
+              "Edward", "Sarah", "Andrew", "Anthony", "Deborah"]
+nick_name = ["Dick", "Bill", "Jim", "Jack", "Peggy",
+             "Ed", "Sally", "Andy", "Tony", "Debbie"]
 name = []
 for i in range(n):
     x = input()
@@ -12,6 +14,7 @@ for i in range(n):
         for j in range(len(nick_name)):
             if nick_name[j] == x:
                 name.append(first_name[j])
-    else: name.append('Not found')
+    else:
+        name.append('Not found')
 for i in range(len(name)):
     print(name[i])

@@ -7,11 +7,11 @@ j = 0
 n = len(d)
 while j < n-1:
     if d[j] <= p:
-        i +=1
+        i += 1
         x = d[i]
         d[i] = d[j]
         d[j] = x
-    j+=1
+    j += 1
 y = d[i+1]
 d[i+1] = d[-1]
 d[-1] = y
