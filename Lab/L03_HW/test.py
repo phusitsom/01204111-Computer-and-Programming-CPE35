@@ -2,7 +2,7 @@ n = int(input(('Number : ')))
 def even_check(num):
     if num % 2 == 0: print('The number is even')
     else: print('The number is odd')
-    
+
 def prime_check(num):
     isprime = None
     if num > 1:

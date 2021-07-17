@@ -12,7 +12,7 @@ def prime_check(num):
                 break
     if isnotprime: print('The number is not prime')
     else: print('The number is prime')
-    
+
 even_check(n)
 prime_check(n)
 

@@ -8,32 +8,29 @@ def What(PRODUCT_CODE:str):
     
     isChecked = True
     
-    if PRODUCT_CODE.isupper:
+    if 64 <= ord(PRODUCT_CODE[0]) <= 90:
         PRODUCT = 'Photobook'
     else: 
         PRODUCT = 'Album'
     
-    print(PRODUCT)
+    return PRODUCT
         
 
 def SStatus():
     if not isChecked:
-        print("Dont Check")
-    else: print(PRODUCT)
+        return "Dont Check"
+    else: 
+        return PRODUCT
+
 
 def RReal(PRODUCT_CODE:str):
-    
-    if PRODUCT_CODE[-1] == chr(ord(PRODUCT_CODE[1]) + 1):
-        print(True)
+    if PRODUCT_CODE[-1] == chr(ord(PRODUCT_CODE[0]) + 1):
+        return True
     else: 
-        print(False)
+        return False
 
-def main():
-    What(PRODUCT_CODE)
-    RReal(PRODUCT_CODE)
 
 PRODUCT_CODE = input()
 
-if __name__ == "__main__":
-    main()
-
+print(What(PRODUCT_CODE))
+print(RReal(PRODUCT_CODE))
