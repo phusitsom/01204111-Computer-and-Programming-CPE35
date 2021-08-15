@@ -1,3 +1,1 @@
-N, M = int(input("N = ")), int(input("M = "))
-L = [int(input(f"cost of day {i+1} = ")) for i in range(N)]
-print(f"Min cost of {M} days = {min(list(map(sum,[tuple(L[i:i+M]) for i in range(N-M+1)])))}")
+(lambda LNM: print(f"Min cost of {LNM[2]} days = {min(list(map(sum,[tuple(LNM[0][i:i+LNM[2]]) for i in range(LNM[1]-LNM[2]+1)])))}"))((lambda N, M:([int(input(f"cost of day {i+1} = ")) for i in range(N)],N,M) )(int(input("N = ")), int(input("M = "))))
