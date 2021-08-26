@@ -7,7 +7,7 @@ prtlist = [string[i:i+n] for i in range(0,n**2,n)]
 for i, item in enumerate(prtlist):
     if len(item) != n:
         item += ("*"*(n-len(item)))
-        prtlist[i] = item
+        prtlist[i] = item  
 if typ == 1: None
 elif typ == 2:
     prtlist = ["".join(tup) for tup in list(zip(*prtlist))]
