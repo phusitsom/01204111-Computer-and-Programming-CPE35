@@ -4,4 +4,6 @@ KU_LAB.code-workspace
 kuWS.code-workspace
 test.py
 *.pyc
-*.ipynb
+sorn.ipynb
+test.ipynb
+
