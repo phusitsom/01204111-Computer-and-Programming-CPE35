@@ -5,13 +5,13 @@ perc_to_grade = {
     67 :"C+", 
     60 :"C",
     50 :"D+", 
-    40 :"D+",
+    40 :"D",
     0:"F"
     }
 
 grade_std_count = {g:0 for g in perc_to_grade.values()}
 
-with open('midTermScore_grp01.csv') as fp:
+with open('MID/midterm.csv') as fp:
   data = (lambda x: [dict(zip(x[0].split(','),row.split(','))) for row in x[1:] if 'Midterm' in row])(fp.read().splitlines())
 
 print(len(data))
