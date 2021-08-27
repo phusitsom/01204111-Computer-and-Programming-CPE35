@@ -41,7 +41,7 @@ East    # Rotate City 180 Degrees
     > (6, 9, 7, 3, 2)
 ]
 
-West    # No More Rotate
+West    # No More Rotation
 [
     > (2, 3, 5, 6, 2), 
     > (1, 3, 4, 7, 1), 
