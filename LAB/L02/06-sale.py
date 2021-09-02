@@ -6,4 +6,4 @@ for day in range(totalDays):
     priceSum += (price - (price * promotion))
     promotion += 0.01
 
-print(f'Summary price = {priceSum:.2f}')    
+print(f'Summary price = {priceSum:.2f}')

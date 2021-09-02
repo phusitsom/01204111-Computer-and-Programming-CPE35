@@ -36,7 +36,7 @@ if max(poles) > ((sorted(poles)[-2])*3):
 else:
 
     C = int(sum(poles)/nPoles)
-    
+
     if H <= 1:
         if C <= 1000:
             corruption = 'NO'
@@ -63,4 +63,5 @@ else:
             corruption = 'YES'
 if delta != None:
     print(f'Avg : {C}\n{corruption} {abs(delta)}')
-else: print(f'Avg : {C}\nNO')
+else:
+    print(f'Avg : {C}\nNO')

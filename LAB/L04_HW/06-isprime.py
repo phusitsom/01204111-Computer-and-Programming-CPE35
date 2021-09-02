@@ -5,10 +5,13 @@ def is_prime(n):
         if n % k == 0:
             return False
     return True
+
+
 primenums = []
 while True:
     n = int(input())
-    if n == 0:break
+    if n == 0:
+        break
     primenums.append(n) if is_prime(n) else None
 for i in range(-(-len(primenums)//10)):
     print(*primenums[:10])

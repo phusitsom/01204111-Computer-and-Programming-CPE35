@@ -1,6 +1,7 @@
 for i, num in enumerate(input()):
     if num != input():
-        print("Fail!!") 
-        break 
+        print("Fail!!")
+        break
     else:
-        if i == 2: print("Succeed!!")
+        if i == 2:
+            print("Succeed!!")

@@ -1,18 +1,26 @@
 N = 10
 
+
 def Nplus(v):
     global N
-    N+=v
+    N += v
+
+
 def Nminus(v):
     global N
-    N-=v
+    N -= v
+
+
 def Ntimes(v):
     global N
-    N*=v
+    N *= v
+
+
 def Ndivided(v):
     global N
-    N/=v
-    
+    N /= v
+
+
 Nplus(5)
 Nminus(3)
 Ntimes(6)
