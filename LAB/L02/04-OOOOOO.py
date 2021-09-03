@@ -1,2 +1,1 @@
-for lineNum in range(int(input())):
-    print('O'*lineNum)
+for lineNum in range(int(input())): print('O'*lineNum)
