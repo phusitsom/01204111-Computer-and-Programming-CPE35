@@ -4,7 +4,7 @@ import re
 with open(input('File name: ')) as file:
     fr = file.read()
 """
-fr
+> fr
 3
   /\\
  /  \\
