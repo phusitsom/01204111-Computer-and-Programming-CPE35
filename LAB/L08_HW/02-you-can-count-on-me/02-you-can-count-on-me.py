@@ -1,2 +1,1 @@
-print(
-    (lambda file_name: f"There are {len(open(file_name).read().split('.'))-1} sentences and {len(open(file_name).read().split())} words.")(input("File name: ")))
+print((lambda file_string: f"There are {len(file_string.split('.'))-1} sentences and {len(file_string.split())} words.")(open(input("File name: ")).read()))
