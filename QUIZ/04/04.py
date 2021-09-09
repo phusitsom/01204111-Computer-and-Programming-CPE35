@@ -3,36 +3,35 @@ def read_csv(fn: str):
         _items = list(map(lambda x: x.split(','),file.read().splitlines()))
         _keys = [item.pop(0) for item in _items[1:]]
         _val_key = _items.pop(0)[1:]
-        
-        return {_key:dict(zip(_val_key,tuple(map(int,_item)))) for _key,_item in zip(_keys,_items)}
+        _data = {}
+        for _key, _item in zip(_keys,_items):
+            
+            if _key not in _data:
+                _data.setdefault(_key,dict(zip(_val_key,[0 for i in range(len(_val_key))])))
+            
+            for _k, _v in zip(_val_key,tuple(map(int,_item))):
+                _data[_key][_k] += _v
+            
+        return _data
     
     
-fn = input('filename: ')
-with open(fn) as file:
-    _items = list(map(lambda x: x.split(','),file.read().splitlines()))
-    _keys = _items.pop(0)
-    
-    data = [dict(zip(_keys,_item)) for _item in _items]
-    
-    
-    
-con_cov1 = read_csv(fn)
+data = read_csv(input('filename: '))
 
-_1 = sum([int(i['Total Cases']) for i in data])
-_2 = max(con_cov1.items(), key= lambda x: x[1]['Deaths'])[0]
-_3 = max(con_cov1.items(), key= lambda x: x[1]['Deaths']/x[1]['Total Cases'])[0]
-_4 = max(con_cov1.items(), key= lambda x: x[1]['Discharged']/x[1]['Total Cases'])[0]
+_1 = sum([int(i['Total Cases']) for i in data.values()])
+_2 = max(data.items(), key= lambda x: x[1]['Deaths'])[0]
+_3 = max(data.items(), key= lambda x: x[1]['Deaths']/x[1]['Total Cases'])[0]
+_4 = max(data.items(), key= lambda x: x[1]['Discharged']/x[1]['Total Cases'])[0]
 
 a = t = 0
 
-for v in con_cov1.values():
+for v in data.values():
     a, t = a+v['Active'], t+ v['Total Cases']
     
 _5 = f'{a*100/t:.2f}%'
 
 avg_7_days = {}
 
-for item in tuple(con_cov1.items()):
+for item in tuple(data.items()):
     
     state = item[0]
     day_1_7 = tuple(item[1].values())[4:]
@@ -51,7 +50,7 @@ _6 = '\n'.join(pri_str_6)
 
 red_states = []
 
-for item in tuple(con_cov1.items()):
+for item in tuple(data.items()):
     
     state = item[0]
     day_1_7 = tuple(item[1].values())[4:]
