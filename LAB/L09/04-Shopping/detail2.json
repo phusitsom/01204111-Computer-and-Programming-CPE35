@@ -1,0 +1,67 @@
+{
+    "products":[
+        {
+            "product_name": "Apple",
+            "price": "1"
+        },
+        {
+            "product_name": "Banana",
+            "price": "2"
+        },
+        {
+            "product_name": "Grape",
+            "price": "3"
+        },
+        {
+            "product_name": "Mango",
+            "price": "4"
+        }
+    ],
+    "customers":[
+        {
+            "customer_name": "Ant",
+            "order": {
+                "Apple": 3,
+                "Banana": 5
+            },
+            "money": 95
+        },
+        {
+            "customer_name": "ant",
+            "order": {
+                "Apple": 3,
+                "Grape": 5
+            },
+            "money": 87
+        },
+        {
+            "customer_name": "Japan",
+            "order": {
+                "Apple": 1,
+                "Grape": 1,
+                "Banana": 1,
+                "Mango": 1
+            },
+            "money": 88
+        },
+        {
+            "customer_name": "japan",
+            "order": {
+                "Apple": 1,
+                "Grape": 1,
+                "Banana": 1
+            },
+            "money": 88
+        },
+        {
+            "customer_name": "Zebra Tiny",
+            "order": {
+                "Apple": 1,
+                "Grape": 1,
+                "Banana": 1
+            },
+            "money": 1000
+        }
+    ]
+
+}
