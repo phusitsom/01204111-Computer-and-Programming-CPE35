@@ -17,57 +17,59 @@ def read_csv(fn: str):
     
 data = read_csv(input('filename: '))
 
-_1 = sum([int(i['Total Cases']) for i in data.values()])
-_2 = max(data.items(), key= lambda x: x[1]['Deaths'])[0]
-_3 = max(data.items(), key= lambda x: x[1]['Deaths']/x[1]['Total Cases'])[0]
-_4 = max(data.items(), key= lambda x: x[1]['Discharged']/x[1]['Total Cases'])[0]
+_1 = lambda : sum([int(i['Total Cases']) for i in data.values()])
+_2 = lambda : max(data.items(), key= lambda x: x[1]['Deaths'])[0]
+_3 = lambda : max(data.items(), key= lambda x: x[1]['Deaths']/x[1]['Total Cases'])[0]
+_4 = lambda : max(data.items(), key= lambda x: x[1]['Discharged']/x[1]['Total Cases'])[0]
 
-a = t = 0
+def _5():
+    a = t = 0
 
-for v in data.values():
-    a, t = a+v['Active'], t+ v['Total Cases']
-    
-_5 = f'{a*100/t:.2f}%'
-
-avg_7_days = {}
-
-for item in tuple(data.items()):
-    
-    state = item[0]
-    day_1_7 = tuple(item[1].values())[4:]
-    
-    if state not in avg_7_days:
-        avg_7_days.setdefault(state,0)
+    for v in data.values():
+        a, t = a+v['Active'], t+ v['Total Cases']
         
-    avg_7_days[state] = sum(day_1_7)/7
+    return f'{a*100/t:.2f}%'
+
+def _6():
+    avg_7_days = {}
+
+    for item in tuple(data.items()):
+        
+        state = item[0]
+        day_1_7 = tuple(item[1].values())[4:]
+        
+        if state not in avg_7_days:
+            avg_7_days.setdefault(state,0)
+            
+        avg_7_days[state] = sum(day_1_7)/7
 
 
-pri_str_6 = []
-for state, avg in sorted(avg_7_days.items(), key= lambda x: x[1], reverse= True)[:5]:
-    pri_str_6.append(f"{state} {avg:.0f}")
-    
-_6 = '\n'.join(pri_str_6)
+    pri_str_6 = []
+    for state, avg in sorted(avg_7_days.items(), key= lambda x: x[1], reverse= True)[:5]:
+        pri_str_6.append(f"{state} {avg:.0f}")
+        
+    return '\n'.join(pri_str_6)
 
-red_states = []
+def _7():
+    red_states = []
 
-for item in tuple(data.items()):
+    for item in tuple(data.items()):
+        
+        state = item[0]
+        day_1_7 = tuple(item[1].values())[4:]
+        
+        tf = tuple(map(lambda x: x>100,day_1_7))
+        
+        
+        for i in range(len(tf)-4):
+            if all(tf[i:i+5]):
+                red_states.append(state)
+                break
     
-    state = item[0]
-    day_1_7 = tuple(item[1].values())[4:]
-    
-    tf = tuple(map(lambda x: x>100,day_1_7))
-    
-    
-    for i in range(len(tf)-4):
-        if all(tf[i:i+5]):
-            red_states.append(state)
-            break
-    
-_7 = sorted(red_states)
+    return sorted(red_states)
 
 ty = int(input('type: '))
 if ty == 7:
-    for i in _7:
-        print(i)
+    [print(i) for i in _7()][0]
 else:
-    print([_1,_2,_3,_4,_5,_6,_7][ty-1])
+    print([_1,_2,_3,_4,_5,_6][ty-1]())

@@ -29,13 +29,14 @@ for tweet in tweet_data:
         
 menu = int(input("input: "))
 
-print([
-    None,
-    len(tweet_data),
-    len(set(tweet['author'] for tweet in tweet_data)),
-    '\n'.join([usr for usr, tw in sorted_tw if tw == max_tw]),
-    len(topics),
-    sum(map(lambda x: x['topic_priority']  == 'ALERT',tweet_data)),
-    sum(map(lambda x: x['topic_priority']  == 'UNIMPORTANT',tweet_data)),
-    bool(sum(map(lambda x: x['language']  != 'EN',tweet_data))),
-    len(max(tweet_data, key= lambda x: len(x['text'].split()))['text'].split()),][menu])
+
+_1 = lambda: len(tweet_data)
+_2 = lambda: len(set(tweet['author'] for tweet in tweet_data))
+_3 = lambda: '\n'.join([usr for usr, tw in sorted_tw if tw == max_tw])
+_4 = lambda: len(topics)
+_5 = lambda: sum(map(lambda x: x['topic_priority']  == 'ALERT',tweet_data))
+_6 = lambda: sum(map(lambda x: x['topic_priority']  == 'UNIMPORTANT',tweet_data))
+_7 = lambda: bool(sum(map(lambda x: x['language']  != 'EN',tweet_data)))
+_8 = lambda: len(max(tweet_data, key= lambda x: len(x['text'].split()))['text'].split())
+
+print([_1, _2, _3, _4, _5, _6, _7, _8][menu])
