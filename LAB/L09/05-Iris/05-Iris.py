@@ -3,11 +3,12 @@ import json
 with open(input('Filename : ')) as file: data = json.loads(file.read())
 
 typ = input('type : ')
-avg_sp = {}
 
+avg_sp = {}
 for item in data:
     species = item.pop('species')
     val = item.pop(typ)
+    
     if species not in avg_sp:
         avg_sp.setdefault(species,[])
     avg_sp[species].append(val)
