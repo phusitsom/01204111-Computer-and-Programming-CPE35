@@ -1,0 +1,17 @@
+How many products are there? : 2
+123 table 2000
+500 guitar 4000
+Id : 456
+This id doesn't exist.
+Id : 789
+This id doesn't exist.
+Id : 123
+Q : 1
+table
+Q : 3
+Id : 111
+This id doesn't exist.
+Id : 500
+Q : 2
+4000
+Q : 0

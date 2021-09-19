@@ -15,7 +15,7 @@ def read_csv(filename):
 class Std(object):
     
     def __init__(self, *args) -> None:
-        self.id = args[0]
+        self.id = args.pop(0)
         self.__scores__ = tuple(map(int, args[-3:]))
         self.__args__ = args
         
@@ -30,7 +30,7 @@ lunch : {}
 test preparation course : {}
 math score : {}
 reading score : {}
-writing score : {}'''.format(*self.__args__[1:]))
+writing score : {}'''.format(*self.__args__))
         
     def less_from_max_math_score(self):
         print(f"less than max : {maxx - self.__scores__[0]}")
