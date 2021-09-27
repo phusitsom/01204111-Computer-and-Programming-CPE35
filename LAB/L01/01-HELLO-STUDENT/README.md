@@ -1,9 +1,3 @@
----
-noteId: "9eb05ba01f5211ecad74a120d4c9d667"
-tags: []
-
----
-
 <div id="current" aria-labelledby="ui-id-1" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false">
     <form method="post" action="/elab/lab/submit/1023/11527/18979/" enctype="multipart/form-data" autocomplete="off">
       <div id="assignment-body">
